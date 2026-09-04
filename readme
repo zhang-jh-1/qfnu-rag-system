@@ -1,0 +1,24 @@
+# 🎓 曲阜师范大学学生手册 RAG 智能问答系统
+
+## 项目简介
+本项目为基于 RAGFlow 与大语言模型构建的特定领域智能问答系统。针对《曲阜师范大学学生手册》的冗长与复杂结构，采用 `Laws` 级智能切块、混合检索及动态提示词优化，实现精准查阅、自动拒答及严格的引用溯源。系统已通过 RAGAS 的量化评估，核心指标 `Faithfulness` 高度达标。
+
+## 目录结构
+project/
+├── README.md                 # 项目说明文档
+├── requirements.txt          # 依赖库版本声明
+├── .env.example              # 环境变量配置模板
+├── src/
+│   ├── rag_engine.py         # RAG API 引擎，处理检索生成解耦
+│   ├── app.py                # Gradio Web 端交互程序
+│   ├── build_index.py        # （可选）自动化索引触发脚本
+│   └── evaluate.py           # RAGAS 系统指标量化评估脚本
+└── data/
+    ├── raw/                  # 拆分后的20份独立规章PDF文档
+    └── eval/                 # 评估集与生成的对比结果报告
+
+## 环境搭建与运行
+1. 安装依赖：`pip install -r requirements.txt`
+2. 配置环境变量：将 `.env.example` 复制为 `.env` 并填入相应的 API 密钥。
+3. 启动交互系统：`python src/app.py`
+4. 执行系统评估：`python src/evaluate.py`

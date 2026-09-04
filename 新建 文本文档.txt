@@ -1,0 +1,10 @@
+project/
+├── requirements.txt          # 项目依赖
+├── .env.example              # 环境变量模板（配置 RAGFlow API Key 及 Base URL）
+├── data/
+│   ├── raw/                  # 拆分后的 10+ 份原始 PDF 文件
+│   └── eval/                 # 评估集与测试结果
+└── src/
+    ├── rag_engine.py         # 封装对 RAGFlow API 的调用（检索与问答）
+    ├── app.py                # Gradio Web 界面（支持引用展示、状态提示）
+    └── evaluate.py           # 后续阶段二评估脚本

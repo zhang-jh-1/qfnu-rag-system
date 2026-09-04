@@ -1,0 +1,8 @@
+ragflow-sdk>=0.14.0
+gradio>=4.20.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+ragas>=0.1.0        # 阶段二新增：量化评估框架
+datasets>=2.18.0    # 阶段二新增：数据处理库
+langchain-openai>=0.1.0 # 阶段二新增：RAGAS调用的模型接口
+pandas>=2.0.0
